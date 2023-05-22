@@ -4,7 +4,7 @@
 This is a deployment scenario where **Flask**, **Gunicorn**, **Nginx**, **WSGI**, and **Certbot** are used together to serve [this manually-administrated website](https://app.ericrxu.com) on HTTPS.
 
 
-### Part definitions
+#### parts
 - **Flask:** Flask is a Python web application framework. You write your web application with Flask, and it will handle the routing, request handling, and response generation for your application.
 
 - **Gunicorn:** Gunicorn is a WSGI HTTP server for Python web applications. It serves as the interface between your Flask application and an actual web server (in this case, Nginx). It takes care of managing worker processes to handle incoming requests and then forwards those requests to your Flask application.
@@ -16,7 +16,7 @@ This is a deployment scenario where **Flask**, **Gunicorn**, **Nginx**, **WSGI**
 - **Certbot:**  free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS.
 
 
-### how these parts work together:
+#### how these parts work together:
 
 
 - **A client makes a request:** A client (like a web browser) sends an HTTP request. This request is received by Nginx because it's the exposed server listening for HTTP(S) requests.
