@@ -1,5 +1,6 @@
-# flask-gunicorn-nginx-wsgi
-
+# **flask-gunicorn-nginx-wsgi**
+________________
+## Setup Overview
 
 This is a deployment scenario where **Flask**, **Gunicorn**, **Nginx**, **WSGI**, and **Certbot** are used together to serve [this manually-administrated website](https://app.ericrxu.com) on HTTPS.
 
@@ -32,3 +33,28 @@ This is a deployment scenario where **Flask**, **Gunicorn**, **Nginx**, **WSGI**
 - **Response routing:** The HTTP response from Flask goes back to Gunicorn, which sends it back to Nginx.
 
 - **Nginx responds to the client:** Finally, Nginx receives the HTTP response from Gunicorn and sends it back to the client (the web browser).  With the addition of HTTP to HTTPS redirection in the Nginx configuration via Certbot, any HTTP requests will be automatically redirected to the corresponding HTTPS requests to ensure secure communication between the client and the server.
+
+
+________________
+
+## Installation Overview
+
+
+
+Upgrade Ubuntu and packages
+
+    sudo apt-get update
+    sudo apt-get upgrade
+
+Install mySQL ([Ubuntu 22.04 instructions here](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-22-04))
+
+Install git, go to your home directory, and clone this repo
+
+    sudo apt-get install git
+    cd ~/
+    git clone https://github.com/eric-r-xu/flask-gunicorn-nginx-wsgi.git
+    
+Prepare environment by installing packages and virtual environments with bash script (prepare_env.sh) 
+    
+    cd flask-gunicorn-nginx-wsgi
+    sh prepare_env.sh
