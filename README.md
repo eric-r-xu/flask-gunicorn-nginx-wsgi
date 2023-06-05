@@ -2,7 +2,7 @@
 ________________
 ## Setup Overview
 
-This is a deployment scenario where **Flask**, **Gunicorn**, **Nginx**, **WSGI**, and **Certbot** are used together to serve [this manually-administrated website](https://app.ericrxu.com) on HTTPS.
+This is an Ubuntu 22.04 deployment scenario where **Flask**, **Gunicorn**, **Nginx**, **WSGI**, and **Certbot** are used together to serve [this manually-administrated website](https://app.ericrxu.com) on HTTPS based on [this wonderful tutorial](https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-22-04) from Digital Ocean.
 
 
 #### parts

@@ -1,4 +1,4 @@
-from myproject import app
+from ericrxu import app
 
 if __name__ == "__main__":
     app.run()
