@@ -62,3 +62,10 @@ Prepare environment by installing packages and virtual environments with bash sc
     pip install wheel
     pip install gunicorn flask
     pip install -r py3requirements.txt
+    
+Set passwords using keyring within python virtual environment
+
+    python
+    
+within python ide
+    >>import keyring
