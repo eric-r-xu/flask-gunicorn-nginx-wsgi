@@ -20,6 +20,7 @@ jaraco.classes
 jeepney
 Jinja2
 keyring
+keyrings.alt
 limits
 markdown-it-py
 MarkupSafe
