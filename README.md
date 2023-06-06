@@ -48,7 +48,7 @@ Install mySQL ([Ubuntu 22.04 instructions here](https://www.digitalocean.com/com
 
 Obtain a free API key for tbe [openweathermap api](https://home.openweathermap.org/api_keys) to be used later with [keyring](https://pypi.org/project/keyring/)
 
-Depending on what email you prefer to send from, obtain email credentials to be used later with [keyring](https://pypi.org/project/keyring/)
+Obtain your gmail email credentials to be used later with [keyring](https://pypi.org/project/keyring/)
 
 Install git, go to your home directory, and clone this repo
 
