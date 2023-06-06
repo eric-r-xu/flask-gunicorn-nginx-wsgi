@@ -57,4 +57,8 @@ Install git, go to your home directory, and clone this repo
 Prepare environment by installing packages and virtual environments with bash script (prepare_env.sh) 
     
     cd flask-gunicorn-nginx-wsgi
-    sh prepare_env.sh
+    python3 -m venv env
+    source env/bin/activate
+    pip install wheel
+    pip install gunicorn flask
+    pip install -r py3requirements.txt
