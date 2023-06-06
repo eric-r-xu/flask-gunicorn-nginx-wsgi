@@ -39,8 +39,6 @@ ________________
 
 ## Installation Overview
 
-
-
 Upgrade Ubuntu and packages
 
     sudo apt-get update
@@ -48,13 +46,17 @@ Upgrade Ubuntu and packages
 
 Install mySQL ([Ubuntu 22.04 instructions here](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-22-04))
 
+Obtain a free API key for tbe [openweathermap api](https://home.openweathermap.org/api_keys) to be used later with [keyring](https://pypi.org/project/keyring/)
+
+Depending on what email you prefer to send from, obtain email credentials to be used later with [keyring](https://pypi.org/project/keyring/)
+
 Install git, go to your home directory, and clone this repo
 
     sudo apt-get install git
     cd ~/
     git clone https://github.com/eric-r-xu/flask-gunicorn-nginx-wsgi.git
     
-Prepare environment by installing packages and virtual environments with bash script (prepare_env.sh) 
+Create python3 virtual environment and install necessary packages
     
     cd flask-gunicorn-nginx-wsgi
     python3 -m venv env
@@ -63,9 +65,14 @@ Prepare environment by installing packages and virtual environments with bash sc
     pip install gunicorn flask
     pip install -r py3requirements.txt
     
-Set passwords using keyring within python virtual environment
+Set credentials/passwords/api_keys ("{{}}") securely using [keyring](https://pypi.org/project/keyring/)
 
     python
-    
-within python ide
     >>import keyring
+    >>keyring.set_password("GMAIL_AUTH", "mail_username", "{{}}")
+    >>keyring.set_password("GMAIL_AUTH", "mail_password", "{{}}")
+    >>keyring.set_password("GMAIL_AUTH", "mail_server", "{{}}")
+    >>keyring.set_password("MYSQL_AUTH", "user", "{{}}")
+    >>keyring.set_password("MYSQL_AUTH", "password", "{{}}")
+    >>keyring.set_password("MYSQL_AUTH", "host", "{{}}")
+    >>keyring.set_password("OPENWEATHERMAP_AUTH", "api_key", "{{}}")
