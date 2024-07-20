@@ -78,9 +78,11 @@ Set credentials/passwords/api_keys ("{{}}") securely using [keyring](https://pyp
 
 
 ## Restarting Service Debugging Notes
+```
 >>cd myproject
 >>source myprojectenv/bin/activate
 >>sudo systemctl start myproject
 >>sudo systemctl enable myproject
 >>sudo systemctl status myproject
 >>sudo systemctl restart nginx
+```
