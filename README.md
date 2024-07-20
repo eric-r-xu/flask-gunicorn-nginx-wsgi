@@ -53,7 +53,6 @@ Obtain your gmail email credentials to be used later with [keyring](https://pypi
 Install git, go to your home directory, and clone this repo
 
     sudo apt-get install git
-    cd ~/
     git clone https://github.com/eric-r-xu/flask-gunicorn-nginx-wsgi.git
     
 Create python3 virtual environment and install necessary packages
@@ -76,3 +75,12 @@ Set credentials/passwords/api_keys ("{{}}") securely using [keyring](https://pyp
     >>keyring.set_password("MYSQL_AUTH", "password", "{{}}")
     >>keyring.set_password("MYSQL_AUTH", "host", "{{}}")
     >>keyring.set_password("OPENWEATHERMAP_AUTH", "api_key", "{{}}")
+
+
+## Restarting Service Debugging Notes
+>>cd myproject
+>>source myprojectenv/bin/activate
+>>sudo systemctl start myproject
+>>sudo systemctl enable myproject
+>>sudo systemctl status myproject
+>>sudo systemctl restart nginx
