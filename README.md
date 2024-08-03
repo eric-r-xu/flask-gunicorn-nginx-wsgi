@@ -41,8 +41,10 @@ ________________
 
 Upgrade Ubuntu and packages
 
+```bash
     sudo apt-get update
     sudo apt-get upgrade
+```
 
 Install mySQL ([Ubuntu 22.04 instructions here](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-22-04))
 
@@ -52,20 +54,23 @@ Obtain your gmail email credentials to be used later with [keyring](https://pypi
 
 Install git, go to your home directory, and clone this repo
 
+```bash
     sudo apt-get install git
     git clone https://github.com/eric-r-xu/flask-gunicorn-nginx-wsgi.git
+```
     
 Create python3 virtual environment and install necessary packages
-    
+```bash
     cd flask-gunicorn-nginx-wsgi
     python3 -m venv env
     source env/bin/activate
     pip install wheel
     pip install gunicorn flask
     pip install -r py3requirements.txt
+```
     
 Set credentials/passwords/api_keys ("{{}}") securely using [keyring](https://pypi.org/project/keyring/)
-
+```bash
     python
     >>import keyring
     >>keyring.set_password("GMAIL_AUTH", "mail_username", "{{}}")
@@ -75,14 +80,16 @@ Set credentials/passwords/api_keys ("{{}}") securely using [keyring](https://pyp
     >>keyring.set_password("MYSQL_AUTH", "password", "{{}}")
     >>keyring.set_password("MYSQL_AUTH", "host", "{{}}")
     >>keyring.set_password("OPENWEATHERMAP_AUTH", "api_key", "{{}}")
+```
 
 
 ## Restarting Service Debugging Notes
-```
+```bash
 >>cd myproject
 >>source myprojectenv/bin/activate
 >>sudo systemctl start myproject
 >>sudo systemctl enable myproject
 >>sudo systemctl status myproject
 >>sudo systemctl restart nginx
+>>sudo systemctl restart myproject.service
 ```
