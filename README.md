@@ -69,27 +69,26 @@ Create python3 virtual environment and install necessary packages
     pip install -r py3requirements.txt
 ```
     
-Set credentials/passwords/api_keys ("{{}}") securely using [keyring](https://pypi.org/project/keyring/)
-```bash
-    python
-    >>import keyring
-    >>keyring.set_password("GMAIL_AUTH", "mail_username", "{{}}")
-    >>keyring.set_password("GMAIL_AUTH", "mail_password", "{{}}")
-    >>keyring.set_password("GMAIL_AUTH", "mail_server", "{{}}")
-    >>keyring.set_password("MYSQL_AUTH", "user", "{{}}")
-    >>keyring.set_password("MYSQL_AUTH", "password", "{{}}")
-    >>keyring.set_password("MYSQL_AUTH", "host", "{{}}")
-    >>keyring.set_password("OPENWEATHERMAP_AUTH", "api_key", "{{}}")
+Set credentials/passwords/api_keys ("{{}}") securely using [keyring](https://pypi.org/project/keyring/) within python
+```python
+    import keyring
+    keyring.set_password("GMAIL_AUTH", "mail_username", "{{}}")
+    keyring.set_password("GMAIL_AUTH", "mail_password", "{{}}")
+    keyring.set_password("GMAIL_AUTH", "mail_server", "{{}}")
+    keyring.set_password("MYSQL_AUTH", "user", "{{}}")
+    keyring.set_password("MYSQL_AUTH", "password", "{{}}")
+    keyring.set_password("MYSQL_AUTH", "host", "{{}}")
+    keyring.set_password("OPENWEATHERMAP_AUTH", "api_key", "{{}}")
 ```
 
 
 ## Restarting Service Debugging Notes
 ```bash
->>cd myproject
->>source myprojectenv/bin/activate
->>sudo systemctl start myproject
->>sudo systemctl enable myproject
->>sudo systemctl status myproject
->>sudo systemctl restart nginx
->>sudo systemctl restart myproject.service
+cd myproject
+source myprojectenv/bin/activate
+sudo systemctl start myproject
+sudo systemctl enable myproject
+sudo systemctl status myproject
+sudo systemctl restart nginx
+sudo systemctl restart myproject.service
 ```
