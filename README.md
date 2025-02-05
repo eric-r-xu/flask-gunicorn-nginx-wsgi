@@ -86,7 +86,7 @@ Set credentials/passwords/api_keys ("{{}}") securely using [keyring](https://pyp
 ```bash
 cd myproject
 source myprojectenv/bin/activate
-sudo systemctl start myproject (or sudo systemctl restart myproject)
+sudo systemctl start myproject # (or sudo systemctl restart myproject)
 sudo systemctl enable myproject
 sudo systemctl status myproject
 sudo systemctl restart nginx
